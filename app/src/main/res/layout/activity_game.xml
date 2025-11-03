@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp"
+    tools:context=".GameActivity">
+
+    <!-- Título del jugador -->
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jugador:"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Contador de aciertos -->
+    <TextView
+        android:id="@+id/tv_aciertos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aciertos: 0"
+        android:textSize="18sp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Cuadrícula de cartas: 4 columnas x 8 filas -->
+    <GridLayout
+        android:id="@+id/card_grid"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="16dp"
+        android:columnCount="4"
+        android:rowCount="8"
+        android:alignmentMode="alignMargins"
+        android:useDefaultMargins="true"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/tv_aciertos"
+        app:layout_constraintBottom_toTopOf="@id/bottom_buttons"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- 32 botones -->
+        <Button android:id="@+id/btn1" android:text="?" android:textStyle="bold" android:onClick="voltearCarta"/>
+        <Button android:id="@+id/btn2" android:text="?" android:textStyle="bold" android:onClick="voltearCarta"/>
+        <Button android:id="@+id/btn3" android:text="?" android:textStyle="bold" android:onClick="voltearCarta"/>
+        <Button android:id="@+id/btn4" android:text="?" android:textStyle="bold" android:onClick="voltearCarta"/>
+        <Button android:id="@+id/btn5" android:text="?" android:textStyle="bold" android:onClick="voltearCarta"/>
+        <Button android:id="@+id/btn6" android:text="?" android:textStyle="bold" android:onClick="voltearCarta"/>
+        <Button android:id="@+id/btn7" android:text="?" android:textStyle="bold" android:onClick="voltearCarta"/>
+        <Button android:id="@+id/btn8" android:text="?" android:textStyle="bold" android:onClick="voltearCarta"/>
+
+        <Button android:id="@+id/btn9" android:text="?" android:textStyle="bold" android:onClick="voltearCarta"/>
+        <Button android:id="@+id/btn10" android:text="?" android:textStyle="bold" android:onClick="voltearCarta"/>
+        <Button android:id="@+id/btn11" android:text="?" android:textStyle="bold" android:onClick="voltearCarta"/>
+        <Button android:id="@+id/btn12" android:text="?" android:textStyle="bold" android:onClick="voltearCarta"/>
+        <Button android:id="@+id/btn13" android:text="?" android:textStyle="bold" android:onClick="voltearCarta"/>
+        <Button android:id="@+id/btn14" android:text="?" android:textStyle="bold" android:onClick="voltearCarta"/>
+        <Button android:id="@+id/btn15" android:text="?" android:textStyle="bold" android:onClick="voltearCarta"/>
+        <Button android:id="@+id/btn16" android:text="?" android:textStyle="bold" android:onClick="voltearCarta"/>
+
+        <Button android:id="@+id/btn17" android:text="?" android:textStyle="bold" android:onClick="voltearCarta"/>
+        <Button android:id="@+id/btn18" android:text="?" android:textStyle="bold" android:onClick="voltearCarta"/>
+        <Button android:id="@+id/btn19" android:text="?" android:textStyle="bold" android:onClick="voltearCarta"/>
+        <Button android:id="@+id/btn20" android:text="?" android:textStyle="bold" android:onClick="voltearCarta"/>
+        <Button android:id="@+id/btn21" android:text="?" android:textStyle="bold" android:onClick="voltearCarta"/>
+        <Button android:id="@+id/btn22" android:text="?" android:textStyle="bold" android:onClick="voltearCarta"/>
+        <Button android:id="@+id/btn23" android:text="?" android:textStyle="bold" android:onClick="voltearCarta"/>
+        <Button android:id="@+id/btn24" android:text="?" android:textStyle="bold" android:onClick="voltearCarta"/>
+
+        <Button android:id="@+id/btn25" android:text="?" android:textStyle="bold" android:onClick="voltearCarta"/>
+        <Button android:id="@+id/btn26" android:text="?" android:textStyle="bold" android:onClick="voltearCarta"/>
+        <Button android:id="@+id/btn27" android:text="?" android:textStyle="bold" android:onClick="voltearCarta"/>
+        <Button android:id="@+id/btn28" android:text="?" android:textStyle="bold" android:onClick="voltearCarta"/>
+        <Button android:id="@+id/btn29" android:text="?" android:textStyle="bold" android:onClick="voltearCarta"/>
+        <Button android:id="@+id/btn30" android:text="?" android:textStyle="bold" android:onClick="voltearCarta"/>
+        <Button android:id="@+id/btn31" android:text="?" android:textStyle="bold" android:onClick="voltearCarta"/>
+        <Button android:id="@+id/btn32" android:text="?" android:textStyle="bold" android:onClick="voltearCarta"/>
+
+    </GridLayout>
+
+    <!-- Botones inferiores -->
+    <LinearLayout
+        android:id="@+id/bottom_buttons"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/btn_reiniciar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:text="Reiniciar"
+            android:onClick="reiniciarJuego" />
+
+        <Button
+            android:id="@+id/btn_salir"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:text="Salir del Juego"
+            android:onClick="salir" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
